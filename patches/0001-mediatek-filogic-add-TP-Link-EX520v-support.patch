@@ -5,7 +5,7 @@ Subject: [PATCH] mediatek: filogic: add TP-Link EX520v support
 
 ---
  .../uboot-envtools/files/mediatek_filogic     |   1 +
- .../mediatek/dts/mt7981b-tplink-ex520v.dts    | 323 ++++++++++++++++++
+ .../mediatek/dts/mt7981b-tplink-ex520v.dts    | 322 ++++++++++++++++++
  .../filogic/base-files/etc/board.d/01_leds    |   7 +
  .../filogic/base-files/etc/board.d/02_network |   6 +
  .../etc/hotplug.d/firmware/11-mt76-caldata    |   3 +
@@ -13,7 +13,7 @@ Subject: [PATCH] mediatek: filogic: add TP-Link EX520v support
  .../base-files/lib/preinit/09_mount_cfg_part  |   3 +
  .../base-files/lib/upgrade/platform.sh        |   1 +
  target/linux/mediatek/image/filogic.mk        |  14 +
- 9 files changed, 363 insertions(+)
+ 9 files changed, 362 insertions(+)
  create mode 100644 target/linux/mediatek/dts/mt7981b-tplink-ex520v.dts
 
 diff --git a/package/boot/uboot-tools/uboot-envtools/files/mediatek_filogic b/package/boot/uboot-tools/uboot-envtools/files/mediatek_filogic
@@ -33,7 +33,7 @@ new file mode 100644
 index 0000000000..34fe6256f8
 --- /dev/null
 +++ b/target/linux/mediatek/dts/mt7981b-tplink-ex520v.dts
-@@ -0,0 +1,323 @@
+@@ -0,0 +1,322 @@
 +// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
 +
 +/dts-v1/;
@@ -302,7 +302,6 @@ index 0000000000..34fe6256f8
 +			partition@4900000 {
 +				label = "ubi1";
 +				reg = <0x4900000 0x2800000>;
-+				read-only;
 +			};
 +
 +			partition@7100000 {
